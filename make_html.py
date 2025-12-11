@@ -9,7 +9,7 @@ def image_block(image_link,indent=6):
     indent = ' '*indent
     img = f"""{indent}<img src="{image_link}" />\n"""
     button = f"""{indent}<button onclick="click{image_num}()"> copy link </button>\n"""
-    script = f"""{indent}<script>click{image_num} = () => {{navigator.clipboard.writeText("{host_site}/{image_link}")}}</script>\n"""
+    script = f"""{indent}<script> click{image_num} = () => {{navigator.clipboard.writeText("{host_site}/{image_link}")}} </script>\n"""
     image_num += 1
     return img+button+script
 
@@ -43,7 +43,7 @@ others = "$#OTHERS#$"
 while (l := html.find(others, i)) != -1:
     r = l + len(others)
 
-    html = html[:l] + ''.join(image_group(image) for image in all_images) + html[r:]
+    html = html[:l] + ''.join(image_block(image) for image in all_images) + html[r:]
 
     i = l + 1
 

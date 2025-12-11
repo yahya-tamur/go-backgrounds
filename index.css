@@ -7,7 +7,7 @@
 }
 
 img {
-  width: min(700px, 100%);
+  max-width: min(700px, 100%);
   text-align: center;
   display: block;
   margin-left: auto;
