@@ -1,0 +1,23 @@
+ body {
+  font-size: 14pt;
+  width: 70%;
+  text-align: center;
+  margin: auto auto;
+  padding-bottom: 30pt;
+}
+
+img {
+  width: min(700px, 100%);
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
